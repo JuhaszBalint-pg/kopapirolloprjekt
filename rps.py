@@ -9,21 +9,23 @@ win = 0
 tie = 0
 lose = 0
 
-while 
-if (valasz == "kő" and a == 1) or (valasz == "papír" and a == 2) or (valasz == "olló" and a == 3):
-    print ("döntetlen")
-    tie += 1
+while a == True:
+    if (valasz == "kő" and a == 1) or (valasz == "papír" and a == 2) or (valasz == "olló" and a == 3):
+        print ("döntetlen")
+        tie += 1
 
-elif (valasz == "kő" and a==2) or (valasz == "papír" and a == 3) or (valasz == "olló" and a == 1):
-    print ("Vesztettél!")
-    lose += 1
+    elif (valasz == "kő" and a==2) or (valasz == "papír" and a == 3) or (valasz == "olló" and a == 1):
+        print ("Vesztettél!")
+        lose += 1
 
-else:
-    print ("Nyertél!")
-    win += 1
+    else:
+        print ("Nyertél!")
+        win += 1
 
 print (f"Győzelmek: {win}")
 print (f"Döntetlenek: {tie}")
 print (f"Vereségek: {lose}")
 
-a = input("Folytassuk? ")
+valasz = input("Folytassuk? igen = i nem = n \n")
+if valasz == "n":
+    a == False
